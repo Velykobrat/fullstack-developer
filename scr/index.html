@@ -40,16 +40,16 @@
             <h3>Frontend Developer Based in Kyiv, Ukraine</h3>
             <p>Crafting intuitive and high-performance web interfaces for digital solutions</p>
             <div class="hero__actions">
-                <button class="btn">Work with me</button>
-                <button class="btn btn--secondary">See my Portfolio</button>
+                <button class="btn" id="btn-work-with-me">Work with me</button>
+                <button class="btn btn--secondary" id="btn-portfolio">See my Portfolio</button>
             </div>
         </div>
 
         <div class="hero__socials">
-            <a href="#"><i class="ri-instagram-line"></i></a>
-            <a href="#"><i class="ri-facebook-box-line"></i></a>
-            <a href="https://www.linkedin.com/in/velykobrat/"><i class="ri-linkedin-box-line"></i></a>
-            <a href="#"><i class="ri-telegram-line"></i></a>
+            <a href="https://www.instagram.com/velykobrat/" target="_blank"><i class="ri-instagram-line"></i></a>
+            <a href="https://www.facebook.com/velykobrat" target="_blank"><i class="ri-facebook-box-line"></i></a>
+            <a href="https://www.linkedin.com/in/velykobrat/" target="_blank"><i class="ri-linkedin-box-line"></i></a>
+            <a href="https://t.me/velykobrat" target="_blank"><i class="ri-telegram-line"></i></a>
         </div>
     </section>
 
@@ -59,8 +59,8 @@
             <h3>Experienced Across Multiple Projects and Technologies</h3>
             <p>Bringing creativity and technical proficiency to building responsive web applications and enhancing user experiences</p>
             <div class="skills__actions">
-                <button class="btn">Work With Me</button>
-                <button class="btn btn--secondary">Send Email</button>
+                <button class="btn" id="btn-work-with-me-2">Work with me</button>
+                <button class="btn btn--secondary" id="btn-send-email">Send Email</button>
             </div>
         </div>
 
@@ -116,31 +116,31 @@
                     <div class="project-card">
                         <img src="/assets/item-1.jpg" alt="Portfolio 1" class="project-card__image">
                         <div class="project-card__info">
-                            <h5>Portfolio-1</h5>
+                            <h5>Photographer Portfolio</h5>
                             <p>August 2023</p>
                         </div>
                         <p class="project-card__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Distinctio est, facere, soluta aliquid illum quisquam neque debitis quia non animi 
                         dicta voluptates harum eos quis repudiandae eius et sapiente ipsam?</p>
-                        <button class="btn">View Live Demo</button>
+                        <button class="btn" onclick="window.open('//photographer-portfolio-chi.vercel.app/', '_blank')">View Live Demo</button>
                     </div>
 
                     <div class="project-card">
                         <img src="/assets/item-2.jpg" alt="Portfolio 2" class="project-card__image">
                         <div class="project-card__info">
-                            <h5>Portfolio-2</h5>
+                            <h5>Photo school</h5>
                             <p>December 2024</p>
                         </div>
                         <p class="project-card__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Distinctio est, facere, soluta aliquid illum quisquam neque debitis quia non animi
                             dicta voluptates harum eos quis repudiandae eius et sapiente ipsam?</p>
-                        <button class="btn">View Live Demo</button>
+                        <button class="btn" onclick="window.open('//contact-book-sage-nine.vercel.app/', '_blank')">View Live Demo</button>
                     </div>
 
                     <div class="project-card">
                         <img src="/assets/item-3.jpg" alt="Portfolio 3" class="project-card__image">
                         <div class="project-card__info">
-                            <h5>Portfolio-3</h5>
+                            <h5>Developer Portfolio</h5>
                             <p>September 2024</p>
                         </div>
                         <p class="project-card__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -176,7 +176,7 @@
                         <p class="project-card__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Distinctio est, facere, soluta aliquid illum quisquam neque debitis quia non animi
                             dicta voluptates harum eos quis repudiandae eius et sapiente ipsam?</p>
-                        <button class="btn">View Live Demo</button>
+                        <button class="btn" onclick="window.open('//velykobrat.github.io/Sweet-Pop/', '_Sweet pop')">View Live Demo</button>
                     </div>
 
                     <div class="project-card">
@@ -188,7 +188,7 @@
                         <p class="project-card__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Distinctio est, facere, soluta aliquid illum quisquam neque debitis quia non animi
                             dicta voluptates harum eos quis repudiandae eius et sapiente ipsam?</p>
-                        <button class="btn">View Live Demo</button>
+                        <button class="btn" onclick="window.open('//contact-book-sage-nine.vercel.app/', '_Orginazer')">View Live Demo</button>
                     </div>
 
                     <div class="project-card">
@@ -197,10 +197,13 @@
                             <h5>Contact book</h5>
                             <p>May 2024</p>
                         </div>
-                        <p class="project-card__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Distinctio est, facere, soluta aliquid illum quisquam neque debitis quia non animi
-                            dicta voluptates harum eos quis repudiandae eius et sapiente ipsam?</p>
-                        <button class="btn">View Live Demo</button>
+                        <p class="project-card__desc">This is a contact management app with user registration and authentication. Technologies used:
+                        React for building the UI.
+                        Redux for state management, including authentication.
+                        React Router for routing and route protection.
+                        PrivateRoute and RestrictedRoute for access control based on authentication.
+                        The app supports automatic user status refresh on startup.</p>
+                        <button class="btn" onclick="window.open('//goit-react-hw-08-gilt-six.vercel.app/', '_Contact book')">View Live Demo</button>
                     </div>
                 </div>
             </section>
@@ -274,12 +277,13 @@
         </div>
     </section>
 
-    <section class="contact">
-        <h5>Got a Projects?</h5>
+    <section id="contact" class="contact">
+        <h5>Got a Project?</h5>
         <h2>Let's Work Together!</h2>
         <button class="btn">Send Message</button>
         <p>Phone: <span>+380930921681</span></p>
     </section>
+
     
     <footer class="footer">
         <div class="footer__brand">
