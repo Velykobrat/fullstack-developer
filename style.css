@@ -712,6 +712,7 @@ body {
 
 .modal {
     display: none;
+    /* Модальне вікно за замовчуванням приховано */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -720,7 +721,6 @@ body {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
     justify-content: center;
     align-items: center;
 }

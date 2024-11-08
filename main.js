@@ -38,36 +38,35 @@ document.getElementById('btn-send-email').addEventListener('click', function () 
 
 
 
-// Отримуємо елементи модального вікна
-const modal = document.getElementById('modal');
-const modalImage = document.getElementById('modalImage');
-const closeBtn = document.querySelector('.close');
+document.addEventListener('DOMContentLoaded', function() {
+    // Код для модального вікна
+    const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modalImage');
+    const closeBtn = document.querySelector('.close');
 
-// Знаходимо всі кнопки/посилання з класом 'open-modal'
-const openModalButtons = document.querySelectorAll('.open-modal');
+    const openModalButtons = document.querySelectorAll('.open-modal');
 
-// Додаємо обробник подій на кожну кнопку/посилання
-openModalButtons.forEach(button => {
-    button.addEventListener('click', (event) => {
-        event.preventDefault(); // Запобігаємо переходу за посиланням
-
-        // Отримуємо шлях до зображення з атрибуту data-image
-        const imageUrl = button.getAttribute('data-image');
-        if (imageUrl) { // Перевіряємо, чи є шлях до зображення
+    // Прив'язуємо події до кнопок для відкриття модалки
+    openModalButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault(); // Запобігаємо переходу за посиланням
+            const imageUrl = button.getAttribute('data-image');
             modalImage.src = imageUrl;
-            modal.style.display = 'block';
+            modal.style.display = 'flex'; // Відображаємо модальне вікно
+        });
+    });
+
+    // Закриваємо модальне вікно по кліку на хрестик
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none'; // Приховуємо модальне вікно
+    });
+
+    // Закриваємо модальне вікно по кліку за його межами
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none'; // Приховуємо модальне вікно
         }
     });
 });
 
-// Закриваємо модальне вікно при натисканні на кнопку закриття
-closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
 
-// Закриваємо модальне вікно при натисканні за межі вікна
-window.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-});
